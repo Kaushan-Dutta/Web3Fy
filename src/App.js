@@ -39,7 +39,7 @@ function App() {
     const {account,contract,provider}=data;
     //console.log(provider._network.chainId);
 
-    if(account){setWallet(true)}
+    if(account){setWallet(true);}
     setProvider(provider);
           setContract(contract);
           setAccount(account);
@@ -133,7 +133,7 @@ function App() {
     {
       wallet==false?<Wallet getData={getData}/>:chain==false?<Chain getChain={getChain} provider={provider}/>:<>
         <Routes>
-          <Route path="/" element={<><Navigation  account={account}/><Search/><Domain /></>} />
+          <Route path="/" element={<><Navigation  account={account}/><Search/><Domain account={account}  provider={provider} contract={contract} /></>} />
           <Route path="/search" element={<><Search/></>} />
           <Route path="/navigation" element={<><Navigation/></>} />
         </Routes>

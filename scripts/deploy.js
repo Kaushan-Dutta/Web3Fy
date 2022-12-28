@@ -21,7 +21,7 @@ async function main() {
    console.log("Contract address",deploy.address);
 
   const names = ["ethdaddy.fy", "openweb.fy", "uiove.fy", "corion.fy", "tokenizer.fy", "hreoku.fy"]
-  const costs = [tokens(10), tokens(25), tokens(15), tokens(2.5), tokens(3), tokens(1)]
+  const costs = [tokens(0.1), tokens(0.25), tokens(0.15), tokens(0.25), tokens(0.3), tokens(0.1)]
 
   for(let i=0;i<costs.length;i++){
     const listItems=await deploy.list(names[i],costs[i]);

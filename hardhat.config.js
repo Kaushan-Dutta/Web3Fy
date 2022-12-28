@@ -13,11 +13,11 @@ module.exports = {
      /* goerli:{
         url:,
         accounts:[process.env.REACT_APP_PRIVATE_KEY]
-     },
+     },*/
      polygon:{
-        url:,
+        url:'https://polygon-mumbai.g.alchemy.com/v2/XRIsNoNI0cvtcyIS988DOfNVBQ9PtS-L',
         accounts:[process.env.REACT_APP_PRIVATE_KEY]
-     } */
+     } 
   },
   paths:{
     artifacts:'./src/artifacts',

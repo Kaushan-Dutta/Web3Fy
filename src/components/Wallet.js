@@ -30,11 +30,13 @@ const Wallet = (props) => {
           }
 
           const web3 = new ethers.providers.Web3Provider(provider);
+          const signer = web3.getSigner();
           const chainId = await window.ethereum.request({ method: 'eth_chainId' });
   
           const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
   
-          const ethDaddy = new ethers.Contract(process.env.REACT_APP_CONTRACT, Contract.abi, web3);
+          const ethDaddy = new ethers.Contract(process.env.REACT_APP_CONTRACT, Contract.abi, signer);
+
           
          
           const account = ethers.utils.getAddress(accounts[0]);
